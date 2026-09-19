@@ -1,7 +1,7 @@
 /*
  * peer.c — Peer Management, Cryptographic Routing, and Session State
  *
- * EDUCATIONAL OVERVIEW & DESIGN PHILOSOPHY
+ * PEER MANAGEMENT & SESSION STATE MACHINE
  * ---------------------------------------
  * In a WireGuard-inspired VPN architecture:
  *   1. Peer Table: Stores static public keys, current UDP endpoints, allowed IP networks,

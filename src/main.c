@@ -1,7 +1,7 @@
 /*
  * main.c — Main Event Loop and VPN Tunnel Orchestrator
  *
- * EDUCATIONAL ARCHITECTURE OVERVIEW
+ * ARCHITECTURE & DATA FLOW OVERVIEW
  * ---------------------------------
  * This main file orchestrates the entire VPN daemon using a non-blocking `poll()` event loop.
  * It ties together all subsystems:
@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
         log_set_level(LOG_LEVEL_INFO);
     }
 
-    LOG_INFO("=== Educational Linux VPN Tunnel Daemon Starting ===");
+    LOG_INFO("=== Linux VPN Tunnel Daemon Starting ===");
 
     /* Initialize Cryptography Library (libsodium) */
     if (vpn_crypto_init() != 0) {

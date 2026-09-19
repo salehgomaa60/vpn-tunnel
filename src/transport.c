@@ -1,8 +1,8 @@
 /*
  * transport.c — UDP Transport and Endpoint Management
  *
- * EDUCATIONAL OVERVIEW
- * --------------------
+ * ASYNCHRONOUS UDP TRANSPORT & NAT ROAMING
+ * ----------------------------------------
  * In a VPN, all encrypted tunnel packets travel across the public Internet
  * inside UDP datagrams.  This module manages:
  *   1. Network Endpoints: parsing, formatting, and comparing IP:Port addresses.

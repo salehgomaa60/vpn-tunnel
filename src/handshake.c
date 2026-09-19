@@ -1,7 +1,7 @@
 /*
  * handshake.c — WireGuard-Inspired 1-RTT Noise IK Handshake State Machine
  *
- * EDUCATIONAL OVERVIEW & CRYPTOGRAPHIC DESIGN
+ * PROTOCOL SPECIFICATION & CRYPTOGRAPHIC DESIGN
  * --------------------------------------------
  * This module implements a 1-Round-Trip-Time (1-RTT) authenticated key exchange based on
  * the Noise IK (Initiator Known static key) pattern using Curve25519, ChaCha20-Poly1305,

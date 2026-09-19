@@ -1,8 +1,8 @@
 /*
  * replay.c — Anti-Replay Sliding Window Protection
  *
- * EDUCATIONAL OVERVIEW & THREAT MODEL
- * -----------------------------------
+ * ANTI-REPLAY SLIDING WINDOW SPECIFICATION
+ * ---------------------------------------
  * An attacker who intercepts valid encrypted VPN packets on the network can record
  * and retransmit (replay) them later. Even though the attacker cannot read or modify
  * the encrypted payload, replaying legitimate packets can disrupt TCP streams, duplicate

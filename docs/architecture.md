@@ -1,4 +1,4 @@
-# Educational VPN Tunnel Architecture
+# VPN Tunnel Architecture
 
 ## 1. High-Level Core Data Flow
 

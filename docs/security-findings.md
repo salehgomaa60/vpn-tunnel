@@ -1,12 +1,10 @@
 # Security Findings & Vulnerability Log
 
 ## Overview
-This document tracks all security findings, fuzzing crashes, memory safety bugs,
-and architectural vulnerabilities discovered during development and testing of
-the educational VPN tunnel.
+This document tracks all security findings, fuzzing campaigns, memory safety verification,
+and architectural threat modeling for the layer-3 VPN tunnel daemon.
 
-> **Note:** This is an educational project demonstrating security engineering
-> principles.  It is NOT a production-grade VPN.
+> **Scope:** This document details the security posture, verification results, and empirical attack findings for the implementation.
 
 ---
 
@@ -100,15 +98,11 @@ during fuzzing or code review.*
 
 ---
 
-## Known Limitations (Educational Scope)
+## Known Scope & Future Protocol Extensions
 
-- **No WireGuard protocol compatibility** — this project uses a WireGuard-
-  *inspired* structure but is NOT wire-compatible with WireGuard peers.
-- **No DoS / rate-limiting** — the handshake processor does not throttle or
-  cookie-challenge unauthenticated initiations.
-- **No PFS-after-rekey beyond session boundary** — the rekeying path is
-  stubbed; only a single session transition is preserved.
-- **Single-threaded event loop** — the `main.c` daemon is single-threaded
-  and not suitable for high-throughput or multi-peer deployment.
-- **No pre-shared key (PSK) layer** — the optional WireGuard PSK mixing step
-  is not implemented.
+- **No WireGuard protocol wire-compatibility** — this project uses a WireGuard-
+  inspired Noise IK structure with custom binary framing, not intended to peer with official WireGuard kernels.
+- **No DoS / cookie challenge** — the handshake processor performs BLAKE2b MAC1 verification, but does not implement the optional MAC2 cookie mechanism for high-volume DDoS mitigation.
+- **Single-session transition model** — rekeying is supported via dual-session staging, but active rekey timers are driven by packet counters rather than automated wall-clock intervals.
+- **Single-threaded event loop** — the `main.c` daemon utilizes a non-blocking `poll()` event loop optimized for clarity, determinism, and single-core efficiency.
+- **No pre-shared key (PSK) layer** — the optional post-quantum / pre-shared key mixing step from Noise IKpsk2 is omitted.

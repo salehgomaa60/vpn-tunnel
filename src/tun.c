@@ -1,8 +1,8 @@
 /*
  * tun.c — Linux TUN (Network Tunnel) Virtual Device Interface
  *
- * EDUCATIONAL OVERVIEW
- * --------------------
+ * LINUX TUN KERNEL DEVICE SUBSYSTEM
+ * ---------------------------------
  * A TUN (Network TUNnel) interface is a virtual Layer-3 network device provided by
  * the Linux kernel. Unlike physical network cards (eth0, wlan0) or TAP devices (Layer-2
  * Ethernet frames), a TUN device operates strictly on raw IP packets (Layer-3 IPv4/IPv6).

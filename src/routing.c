@@ -1,8 +1,8 @@
 /*
  * routing.c — IPv4 Address Parsing and CIDR Cryptographic Routing Math
  *
- * EDUCATIONAL OVERVIEW & SUBNET MATH
- * ----------------------------------
+ * CRYPTOGRAPHIC ROUTING & CIDR PREFIX MATCHING
+ * -------------------------------------------
  * In WireGuard and our VPN tunnel, IP routing is tied directly to peer identity ("Cryptographic Routing").
  * Every peer configuration specifies an "AllowedIPs" list in CIDR notation (e.g., "10.0.0.2/32" or "192.168.1.0/24").
  *

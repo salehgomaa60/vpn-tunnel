@@ -25,7 +25,7 @@ WHY THIS DOESN'T WORK — The Two-Phase Replay Invariant:
   Our implementation correctly does NOT have this bug.
 
 Relevant source:
-  src/replay.c lines 19-31 (the educational comment in the file):
+  src/replay.c lines 19-31 (the architectural specification in the file):
     "AEAD Decryption is performed.
      If decryption fails -> tag mismatch, packet dropped, filter unchanged.
      replay_update() is called ONLY AFTER AEAD decryption succeeds."
