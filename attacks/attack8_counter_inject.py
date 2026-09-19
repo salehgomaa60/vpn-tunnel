@@ -84,7 +84,7 @@ def main():
         packet = header + fake_auth_tag  # 16 + 16 = 32 bytes
 
         sock.sendto(packet, target)
-        print(f"  Sent counter=0x{counter:016X} → expect: replay_check PASS, then AEAD FAIL")
+        print(f"  Sent counter=0x{counter:016X} -> expect: replay_check PASS, then AEAD FAIL")
         time.sleep(0.1)
 
     print()
