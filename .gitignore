@@ -1,0 +1,37 @@
+# Executables & Binaries
+vpn-tunnel
+tests/test_crypto
+tests/test_crypto_init
+tests/test_handshake
+tests/test_packet
+tests/test_peer
+tests/test_replay
+tests/test_transport
+tests/test_tun
+fuzz/fuzz_packet_parser
+fuzz/fuzz_aead
+fuzz/fuzz_handshake
+fuzz/fuzz_replay
+
+# Object files & compiled libraries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+fuzz/*.o
+src/*.o
+tests/*.o
+
+# Compiled dependencies output
+deps/dist/
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.log
+.vscode/
+.idea/
+scratch/
